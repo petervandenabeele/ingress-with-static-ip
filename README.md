@@ -43,6 +43,10 @@ Create a global IP address named `kubernetes-ingress`:
 gcloud compute addresses create kubernetes-ingress --global
 ```
 
+NOTE: When creating the Static Address through the console, please make sure
+to select the "Global" Type. A "Regional" Type is the default, but that will
+not work with the L7 Load Balancer used here.
+
 Create the `nginx` deployment:
 
 ```
